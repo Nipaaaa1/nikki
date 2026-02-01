@@ -1,7 +1,7 @@
 dev:
 	uv run app/manage.py runserver
 
-create-migration:
+migration:
 	uv run app/manage.py makemigrations
 
 migrate:

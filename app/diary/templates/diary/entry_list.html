@@ -1,12 +1,11 @@
 {% extends "diary/base.html" %}
 
-{% block title %}Home{% endblock %}
+{% block title %}Entries{% endblock %}
 
 {% block content %}
-<h1>{{ home.heading }}</h1>
-<p>{{ home.description }}</p>
 
-<a href="{% url 'entry_list_view' %}">Lihat semua entri diari</a>
+<h1>Daftar Entri Diari</h1>
+
 <ul>
   {% for diary in diaries %}
   <li>{{ diary.created }} - {{ diary.title }}</li>
