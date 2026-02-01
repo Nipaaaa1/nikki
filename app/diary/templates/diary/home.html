@@ -3,5 +3,12 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-<h1>Welcome to Nikki!</h1>
+<h1>{{ home.heading }}</h1>
+<p>{{ home.description }}</p>
+
+<ul>
+  {% for diary in diaries %}
+  <li>{{ diary.created }} - {{ diary.title }}</li>
+  {% endfor %}
+</ul>
 {% endblock %}
