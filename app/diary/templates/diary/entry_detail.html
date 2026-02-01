@@ -1,0 +1,13 @@
+{% extends "diary/base.html" %}
+
+{% block title %}{{ diary.title }}{% endblock %}
+
+{% block content %}
+
+<a href="{% url 'home_view' %}">Kembali ke beranda</a>
+<h1>{{ diary.title }}</h1>
+<span>{{ diary.created }}</span>
+
+<p>{{ diary.content }}</p>
+
+{% endblock %}

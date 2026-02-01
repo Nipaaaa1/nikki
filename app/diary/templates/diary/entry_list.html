@@ -8,7 +8,7 @@
 
 <ul>
   {% for diary in diaries %}
-  <li>{{ diary.created }} - {{ diary.title }}</li>
+  <li><a href="{% url 'entry_detail_view' diary.id %}">{{ diary.created }} - {{ diary.title }}</a></li>
   {% endfor %}
 </ul>
 {% endblock %}
