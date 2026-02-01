@@ -6,10 +6,18 @@
 <h1>{{ home.heading }}</h1>
 <p>{{ home.description }}</p>
 
-<a href="{% url 'entry_list_view' %}">Lihat semua entri diari</a>
-<ul>
+<nav class="nav">
+  <a href="{% url 'entry_list_view' %}">→ Lihat semua entri</a>
+</nav>
+
+<ul class="diary-list">
   {% for diary in diaries %}
-  <li><a href="{% url 'entry_detail_view' diary.id %}">{{ diary.created }} - {{ diary.title }}</a></li>
+  <li>
+    <a href="{% url 'entry_detail_view' diary.id %}">
+      <time>{{ diary.created }}</time><br>
+      {{ diary.title }}
+    </a>
+  </li>
   {% endfor %}
 </ul>
 {% endblock %}

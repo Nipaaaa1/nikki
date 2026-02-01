@@ -3,12 +3,20 @@
 {% block title %}Entries{% endblock %}
 
 {% block content %}
+<nav class="nav">
+  <a href="{% url 'home_view' %}">← Kembali ke beranda</a>
+</nav>
 
 <h1>Daftar Entri Diari</h1>
 
-<ul>
+<ul class="diary-list">
   {% for diary in diaries %}
-  <li><a href="{% url 'entry_detail_view' diary.id %}">{{ diary.created }} - {{ diary.title }}</a></li>
+  <li>
+    <a href="{% url 'entry_detail_view' diary.id %}">
+      <time>{{ diary.created }}</time><br>
+      {{ diary.title }}
+    </a>
+  </li>
   {% endfor %}
 </ul>
 {% endblock %}
