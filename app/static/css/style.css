@@ -1,0 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(60, 23%, 98%);
+  color: hsl(71, 21%, 8%);
+}
